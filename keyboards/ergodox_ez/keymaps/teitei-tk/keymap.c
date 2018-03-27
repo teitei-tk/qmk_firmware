@@ -4,34 +4,27 @@
 #include "ergodox_ez.h"
 #include "debug.h"
 #include "action_layer.h"
+#include "keymap_jp.h"
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols and media
-
-#define JA_CLON KC_QUOT  // : and +
-#define JA_AT   KC_LBRC  // @ and `
-#define JA_HAT  KC_EQL   // ^ and ~
-#define JA_ENUN KC_RO    // \ and _ (EN mark and UNder score)
-#define JA_ENVL KC_JYEN  // \ and | (EN mark and Vertical Line)
-#define JA_LBRC KC_RBRC  // [ and {
-#define JA_RBRC KC_BSLS  // ] and }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~^ |   |    |
+ * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~^ |   |\   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           |      |   Y  |   U  |   I  |   O  |   P  |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  [{  |   }]   |
- * |--------+------+------+------+------+------|  L1  |           |  '"  |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|  '"  |           |  '"  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  .>  |  /?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |  Opt |  Cmd | Eisu |                                       | kana |  ;:  |  :*  |  `   |    _   |
  *   `----------------------------------'                                       `------------------------------------'
  *                                     ,--------------.           ,--------------.
- *                                     |   *  |   +   |           |  =   |   :  |
+ *                                     |   *  |   +   |           |  =   |  :*  |
  *                             ,-------|------|-------|           |------+-------+-------.
  *                             |       |      | Left  |           |  Up  |       |       |
  *                             | Back  |  DEL |-------|           |------| Space | Enter |
@@ -49,19 +42,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,        KC_Z,       KC_X,     KC_C,       KC_V,      KC_B,   KC_QUOTE,
         KC_NO,          KC_NO,      KC_LALT,  KC_LGUI,    KC_LANG2,
 
-                        KC_ASTERISK,   KC_PLUS,   /* KC_KP_EQUAL,    KC_COLON, */
+                        KC_ASTERISK,   JP_PLUS,   /* KC_KP_EQUAL,    KC_COLON, */
                                        KC_LEFT,   /* KC_UP, */
-        KC_BSPACE,      KC_DELETE,     KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
+        KC_BSPACE,      S(KC_BSPACE),        KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
 
         // right hand
-        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    KC_EQL,     KC_PIPE,
+        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    JP_CIRC,    JP_YEN,
         KC_NO,          KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_AT,
-                        KC_H,       KC_J,       KC_K,       KC_L,       KC_LBRC,    KC_RBRC,
-        TG(SYMB),       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RSFT,
-                                    KC_LANG1,   KC_SCLN,    KC_BSLASH,  KC_GRAVE,   KC_UNDERSCORE,
+                        KC_H,       KC_J,       KC_K,       KC_L,       JP_LBRC,    JP_RBRC,
+        KC_QUOTE,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RSFT,
+                                    KC_LANG1,   KC_SCLN,    KC_BSLASH,  KC_GRAVE,   JP_BSLS,
 
 
-        /*              KC_ASTERISK,   KC_PLUS, */  KC_KP_EQUAL,    KC_COLON,
+        /*              KC_ASTERISK,   KC_PLUS, */  KC_KP_EQUAL,  JP_COLN,
         /*                             KC_LEFT, */  KC_UP,
         /* KC_BSPACE,   KC_DELETE,     KC_RIGHT,*/  KC_DOWN, KC_SPACE, KC_ENT
     ),
