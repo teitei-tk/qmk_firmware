@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~^ |   |    |
+ * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~^ |   |\   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           |      |   Y  |   U  |   I  |   O  |   P  |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |      |      |  Opt |  Cmd | Eisu |                                       | kana |  ;:  |  :*  |  `   |    _   |
  *   `----------------------------------'                                       `------------------------------------'
  *                                     ,--------------.           ,--------------.
- *                                     |   *  |   +   |           |  =   |   :  |
+ *                                     |   *  |   +   |           |  =   |  :*  |
  *                             ,-------|------|-------|           |------+-------+-------.
  *                             |       |      | Left  |           |  Up  |       |       |
  *                             | Back  |  DEL |-------|           |------| Space | Enter |
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                         KC_ASTERISK,   JP_PLUS,   /* KC_KP_EQUAL,    KC_COLON, */
                                        KC_LEFT,   /* KC_UP, */
-        KC_BSPACE,      KC_DELETE,     KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
+        KC_BSPACE,      S(KC_BSPACE),        KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
 
         // right hand
         KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    JP_CIRC,    JP_YEN,
