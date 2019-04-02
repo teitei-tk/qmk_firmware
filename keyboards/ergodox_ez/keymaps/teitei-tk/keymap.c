@@ -34,7 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 // layer 0 : default
-[BASE] = KEYMAP(
+// ]}
+[BASE] = LAYOUT_ergodox(
         // left hand
         KC_ESC,         KC_1,       KC_2,     KC_3,       KC_4,      KC_5,   KC_6,
         KC_TAB,         KC_Q,       KC_W,     KC_E,       KC_R,      KC_T,   KC_NO,
@@ -47,14 +48,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_BSPACE,      S(KC_BSPACE),        KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
 
         // right hand
-        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    JP_CIRC,    JP_YEN,
+        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    JP_CIRC,    KC_NUBS,
         KC_NO,          KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_AT,
                         KC_H,       KC_J,       KC_K,       KC_L,       JP_LBRC,    JP_RBRC,
         KC_QUOTE,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RSFT,
                                     KC_LANG1,   KC_SCLN,    KC_BSLASH,  KC_GRAVE,   JP_BSLS,
 
 
-        /*              KC_ASTERISK,   KC_PLUS, */  KC_KP_EQUAL,  JP_COLN,
+        /*              KC_ASTERISK,   KC_PLUS, */  KC_KP_EQUAL,  KC_COLON,
         /*                             KC_LEFT, */  KC_UP,
         /* KC_BSPACE,   KC_DELETE,     KC_RIGHT,*/  KC_DOWN, KC_SPACE, KC_ENT
     ),
@@ -80,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------------'       `--------------------'
  */
 // SYMBOLS
-[SYMB] = KEYMAP(
+[SYMB] = LAYOUT_ergodox(
        // left hand
        KC_TRNS,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
