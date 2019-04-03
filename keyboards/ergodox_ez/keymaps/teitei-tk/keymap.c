@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~^ |   |\   |
+ * | Esc    |   1  |   2  |   3  |   4  |   5  |  6   |           |   7  |   8  |   9  |   0  |   -  |   ~  |   |\   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           |      |   Y  |   U  |   I  |   O  |   P  |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -43,16 +43,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,        KC_Z,       KC_X,     KC_C,       KC_V,      KC_B,   KC_QUOTE,
         KC_NO,          KC_NO,      KC_LALT,  KC_LGUI,    KC_LANG2,
 
-                        KC_ASTERISK,   JP_PLUS,   /* KC_KP_EQUAL,    KC_COLON, */
+                        KC_ASTERISK,   KC_KP_PLUS,   /* KC_KP_EQUAL,    KC_COLON, */
                                        KC_LEFT,   /* KC_UP, */
         KC_BSPACE,      S(KC_BSPACE),        KC_RIGHT,  /* KC_DOWN, KC_SPACE, KC_ENT */
 
         // right hand
-        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    JP_CIRC,    KC_NUBS,
+        KC_7,           KC_8,       KC_9,       KC_0,       KC_MINS,    KC_TILD,    KC_BSLASH,
         KC_NO,          KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_AT,
-                        KC_H,       KC_J,       KC_K,       KC_L,       JP_LBRC,    JP_RBRC,
+                        KC_H,       KC_J,       KC_K,       KC_L,       KC_LBRACKET,    KC_RBRACKET,
         KC_QUOTE,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RSFT,
-                                    KC_LANG1,   KC_SCLN,    KC_BSLASH,  KC_GRAVE,   JP_BSLS,
+                                    KC_LANG1,   KC_SCLN,    KC_BSLASH,  KC_GRAVE,   KC_UNDERSCORE,
 
 
         /*              KC_ASTERISK,   KC_PLUS, */  KC_KP_EQUAL,  KC_COLON,
